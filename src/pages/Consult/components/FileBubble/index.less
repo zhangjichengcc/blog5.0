@@ -1,0 +1,107 @@
+.file_container {
+  margin-top: 0.5rem;
+  box-sizing: border-box;
+  display: flex;
+  .ava_container {
+    width: 0.8rem;
+    height: 0.8rem;
+    margin-right: 0.3rem;
+    border-radius: 50%;
+   &>img {
+    width: 0.72rem;
+    height: 0.72rem;
+    border-radius: 50%;
+   }
+  }
+  .file_info {
+    width: 60%;
+    position: relative;
+    .send_time {
+      color: #999999;
+      font-size: 0.24rem;
+    }
+    .send_info {
+      display: flex;
+      align-items: center;
+      padding: 0.18rem 0.16rem;
+      border: 0.02rem solid #E8E8E8;
+      border-radius: 0.08rem;
+      &>img {
+        width: 0.62rem;
+        height: 0.62rem;
+        margin-right: 0.16rem;
+      }
+      &>div{
+        width: 90%;
+        .file_name {
+          color: #333333;
+          font-size: 0.28rem;
+        }
+        .file_size {
+          font-size: 0.24rem;
+          color: #999999;
+        }
+        p {
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+
+    .send_info.left {
+      background-color: #EDF4FF;
+    }
+    .send_info.right:before, .send_info.left:before {
+      content: '';
+      width: 0;
+      height: 0;
+      border: 0.14rem solid;
+      position: absolute;
+    }
+    .send_info.right:before {
+      top: 0.47rem;
+      left: -0.29rem;
+      border-color:  transparent #E8E8E8  transparent transparent;
+    }
+    .send_info.left:before {
+      right: -0.28rem;
+      border-color:  transparent transparent transparent #E8E8E8;
+    }
+
+    .send_info.left:after, .send_info.right:after {
+      content: '';
+      width: 0;
+      height: 0;
+      border: 0.2rem solid;
+      position: absolute;
+     
+    }
+    
+    .send_info.right:after {
+      top: 0.41rem;
+      left: -0.32rem;
+      border-color:  transparent #fff transparent transparent;
+    }
+    .send_info.left:after {
+      left: 4.41rem;
+      top: 0.39rem;
+      border-color:  transparent transparent transparent #EDF4FF;
+    }
+  }
+}
+
+.file_container.self {
+  display: flex;
+  flex-direction: row-reverse;
+  .ava_container {
+    margin-left: 0.3rem;
+    margin-right: 0;
+    &>img{
+      margin-right: 0;
+    }
+  }
+  .send_time {
+    text-align: right;
+  }
+}

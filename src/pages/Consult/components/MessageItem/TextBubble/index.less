@@ -1,0 +1,52 @@
+@text-margin: .2rem;
+@avator-size: .77rem;
+
+.textBubble {
+  display: flex;
+  padding-top: .2rem;
+  &.left {
+    >.text {
+      margin-left: @text-margin;
+      background-color: #fff;
+      box-shadow: 0 0 .02rem .01rem rgba(0, 0, 0, .16);
+      &::before {
+        background-color: #fff;
+        border-left: #eee solid .02rem;
+        border-bottom: #eee solid .02rem;
+        left: -.08rem;
+      }
+    }
+  }
+  &.right {
+    flex-flow: row-reverse;
+    >.text {
+      margin-right: @text-margin;
+      background-color: #9eea6a;
+      &::before {
+        background-color: #9eea6a;
+        right: -.08rem;
+      }
+    }
+  }
+  >.avator {
+    width: @avator-size;
+    height: @avator-size;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  >.text {
+    position: relative;
+    border-radius: .1rem;
+    padding: .23rem;
+    font-size: .28rem;
+    max-width: calc(100% - 2 * @text-margin - 2 * @avator-size);
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: .16rem;
+      height: .16rem;
+      transform: rotate(45deg);
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import '../../../themes/default.less';
+
+.global_bar {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 45px;
+  background-color: #fff;
+  bottom: 0;
+  box-shadow: 0 -2px 2px 0 rgba(202,202,202,0.07);
+  >ul {
+    display: flex;
+    width: 100%;
+    >li {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      &.active {
+        color: @active-color;
+      }
+      .icon {
+        font-size: 20px;
+      }
+      >span {
+        font-size: 12px;
+      }
+    }
+  }
+}

@@ -1,3 +1,32 @@
+/*
+ * @Author: zhangjicheng
+ * @Date: 2020-06-30 17:00:49
+ * @LastEditTime: 2020-07-02 18:38:37
+ * @LastEditors: Please set LastEditors
+ * @Description: eslit 校验规则
+ * @FilePath: \blog5.0\.eslintrc
+ */ 
 {
-  "extends": "eslint-config-umi"
+  "extends": ["eslint-config-umi"],
+  // "extends": "airbnb",
+  // "env": {
+  //   "browser": true,
+  //   "node": true,
+  //   "es6": true,
+  //   "mocha": true,
+  //   "jest": true,
+  //   "jasmine": true
+  // },
+  "rules": {
+    "no-console":"warn",
+    "no-alert":"warn",
+    "jsx-a11y/href-no-hash": "off",
+    "@typescript-eslint/consistent-type-assertions": "off",
+    "consistent-return":"off",
+    "consistent-this":"off"
+  }
+  // "parserOptions": {
+  //   "ecmaVersion": 6,
+  //   "sourceType": "module"
+  // }
 }

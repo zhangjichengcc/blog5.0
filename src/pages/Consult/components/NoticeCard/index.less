@@ -1,0 +1,71 @@
+.card {
+  position: relative;
+  margin: 0 0.32rem;
+  padding: 0.36rem 0.2rem;
+  border-radius: 0.16rem;
+  background-color: #fff;
+  box-shadow: 0 0.02rem 0.32rem 0 rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+
+  .avatar {
+    position: relative;
+    width: 0.96rem;
+    height: 0.96rem;
+    margin-right: 0.36rem;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-image: url(../../images/avatar.jpg);
+    border-radius: 50%;
+    .red_point {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 0.24rem;
+      height: 0.24rem;
+      background-color: #FF7875;
+      border-radius: 50%;
+      color: #ffffff;
+      font-size: 0.2rem;
+      text-align: center;
+    }
+  }
+
+  .info {
+    width: 80%;
+    .title {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.12rem;
+      .name {
+        color: #333333;
+        font-size: 0.32rem;
+        font-weight: 600;
+      }
+      .time {
+        font-size: 0.24rem;
+        color: #999999;
+      }
+    }
+    .content {
+      display: flex;
+      justify-content: space-between;
+      .over_time {
+        background-color: #B8B8B8;
+        border-radius: 0.08rem;
+        color: #ffffff;
+        font-size: 0.2rem;
+        line-height: 0.28rem;
+        padding: 0 0.04rem;
+      }
+    }
+  }
+
+  .ellips {
+    width: 80%;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+
+}

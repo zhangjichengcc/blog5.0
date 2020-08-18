@@ -1,13 +1,29 @@
+/*
+ * @Author: your name
+ * @Date: 2020-06-28 10:41:42
+ * @LastEditTime: 2020-07-03 09:36:48
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \blog5.0\src\pages\index.tsx
+ */
+
 import React from 'react';
 import styles from './index.css';
 
-export default function() {
+export default function () {
   return (
+    // eslint-disable-next-line react/jsx-filename-extension
     <div className={styles.normal}>
       <div className={styles.welcome} />
       <ul className={styles.list}>
-        <li>To get started, edit <code>src/pages/index.js</code> and save to reload.</li>
         <li>
+          To get started, edit
+          <code>src/pages/index.js</code>
+          {' '}
+          and save to reload.
+        </li>
+        <li>
+          {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
           <a href="https://umijs.org/guide/getting-started.html">
             Getting Started
           </a>

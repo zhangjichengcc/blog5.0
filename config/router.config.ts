@@ -1,7 +1,7 @@
 /*
  * @Author: zhangjicheng
  * @Date: 2020-06-28 10:42:37
- * @LastEditTime: 2020-06-28 16:42:49
+ * @LastEditTime: 2020-07-01 03:50:47
  * @LastEditors: Please set LastEditors
  * @Description: 配置路由文件
  * @FilePath: \blog5.0\config\router.config.ts
@@ -13,15 +13,21 @@ export default [
     routes: [
       { path: '/', component: '../pages/index' },
       {
-        title: 'page1',
-        path: '/page1',
-        component: '../pages/Page1',
-        footerBar: false,
+        title: 'Veigar',
+        path: '/home',
+        component: '../pages/Home',
+        // footerBar: false,
       },
       {
-        title: 'page2',
-        path: '/page2',
-        component: '../pages/Page2',
+        title: '发现',
+        path: '/find',
+        component: '../pages/Find',
+        // footerBar: false,
+      },
+      {
+        title: '我的',
+        path: '/my',
+        component: '../pages/My',
       }
     ]
   }

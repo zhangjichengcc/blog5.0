@@ -1,0 +1,200 @@
+@import '../../assets/mixins/hairline.less';
+@import '../../assets/mixins/common.less';
+@import '../../themes/default.less';
+.view_content {
+  height: 100%;
+  overflow: hidden;
+
+  .scrolldom {
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: scroll;
+  }
+
+  &:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 2rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+  }
+
+  .tab_content {
+    width: 100%;
+    min-height: calc(100vh - 2.52rem);
+    overflow: scroll;
+
+    .notice_type {
+      padding: 0.48rem 0;
+      text-align: center;
+
+      span {
+        font-size: 0.26rem;
+        display: inline-block;
+        width: 1.12rem;
+        height: 0.48rem;
+        line-height: 0.44rem;
+        border: 0.01rem solid #888;
+        color: #888;
+        border-radius: 0.44rem;
+        text-align: center;
+
+        &:not(:last-child) {
+          margin-right: 0.48rem;
+        }
+
+        &.active {
+          background: linear-gradient(126deg,
+          rgba(111, 181, 254, 1) 0%,
+          rgba(68, 136, 254, 1) 100%);
+          border: none;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  :global {
+    .am-navbar {
+      background-color: #4C78B3;
+    }
+    .am-tabs {
+      > .am-tabs-tab-bar-wrap {
+        position: absolute;
+        left: 0.24rem;
+        right: 0.24rem;
+
+        &::before {
+          background-color: unset;
+        }
+
+        > .am-tabs-default-bar {
+          > .am-tabs-default-bar-animated {
+            .am-tabs-default-bar-top {
+              background-color: unset;
+            }
+          }
+
+          > .am-tabs-default-bar-content {
+            height: 1rem;
+            > .am-tabs-default-bar-tab {
+              height: 1rem;
+              transition: all ease 0.3s;
+              font-size: 0.3rem;
+              color: #666;
+              font-weight: 400;
+              border: none;
+
+              &.am-tabs-default-bar-tab-active {
+                color: #333;
+                font-size: 0.3rem;
+                font-weight: 500;
+                border-bottom: none;
+              }
+            }
+
+            > .am-tabs-default-bar-underline {
+              z-index: 1;
+              transform: scaleX(0.5);
+              width:1.12rem;
+              height: 0.06rem;
+              background-image: linear-gradient(270deg, rgba(114, 184, 255, 1) 0%, rgba(62, 130, 254, 1) 100%);
+              border-radius: 0.04rem;
+              border: 0;
+            }
+          }
+        }
+      }
+
+      > .am-tabs-content-wrap {
+        padding-top: 1rem;
+      }
+    }
+
+    .am-tabs-pane-wrap {
+      height: 100%;
+    }
+  }
+}
+
+.target {
+  display: flex;
+  justify-content: center;
+  padding: 6%;
+  .target_child {
+    flex: 1;
+    padding: 2%;
+    &>img {
+      width: 1.12rem;
+      height: 1.12rem;
+    }
+  }
+}
+
+.am-modal .am-modal-transparent {
+  width: 7.2rem !important;
+}
+
+.open_btn {
+  width: 6.86rem;
+  height: 0.7rem;
+  background: linear-gradient(270deg,rgba(114,184,255,1) 0%,rgba(62,130,254,1) 100%);
+  box-shadow: 0 0.04rem 0.08rem 0 rgba(176,191,218,0.52);
+  border-radius: 0.1rem;
+  color: #fff;
+  text-align: center;
+  line-height: 0.7rem;
+  font-size: 0.28rem;
+  margin: 0 auto;
+  margin-top: 0.4rem;
+}
+
+.view_null {
+  position: absolute;
+  z-index: -1;
+  top: 1rem;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-image: url(../../assets/images/declarePayment/without-list.png);
+
+  > .banner {
+    padding-top: 6.67rem;
+    text-align: center;
+
+    > span {
+      font-size: 0.32rem;
+      font-family: PingFangSC-Medium;
+      font-weight: 500;
+      color: #333;
+      line-height: 0.44rem;
+    }
+  }
+
+  > .view_null_btn {
+    padding-top: 2.48rem;
+    padding-bottom: 2rem;
+    text-align: center;
+
+    > span {
+      display: inline-block;
+      width: 2.44rem;
+      border-radius: 2rem;
+      padding: 0.22rem 0;
+      background: #fff;
+      box-shadow: 0px 13px 25px 0px rgba(52, 61, 112, 0.17);
+      font-size: 0.32rem;
+      font-family: PingFangSC-Medium;
+      font-weight: 500;
+      color: #484271;
+      line-height: 0.44rem;
+    }
+  }
+}

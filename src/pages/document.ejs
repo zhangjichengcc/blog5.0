@@ -1,0 +1,34 @@
+<!--
+ * @Author: zhangjicheng
+ * @Date: 2020-06-30 15:12:05
+ * @LastEditTime: 2020-06-30 15:17:29
+ * @LastEditors: Please set LastEditors
+ * @Description: html 模板
+ * @FilePath: \blog5.0\src\pages\document.ejs
+--> 
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="format-detection" content="email=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no,  viewport-fit=cover" />
+  <title>Veigar</title>
+  <script>
+    windowUnload = () => {
+      const now = new Date().getTime();
+      window.localStorage.setItem('leaveTime', now);
+      window.localStorage.removeItem('InitCode');
+      window.localStorage.removeItem('hasCode');
+    };
+  </script>
+</head>
+<body onunload="windowUnload()">
+
+<div id="root"></div>
+</body>
+
+</html>

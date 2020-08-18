@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-06-28 10:23:53
- * @LastEditTime: 2020-06-28 16:53:36
+ * @LastEditTime: 2020-07-02 11:13:47
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \blog5.0\.umirc.ts
@@ -32,7 +32,7 @@ const config: IConfig =  {
     ['umi-plugin-react', {
       antd: false,
       dva: false,
-      dynamicImport: false,
+      dynamicImport: true, // 路由按需加载
       title: 'blog5.0',
       dll: false,
       

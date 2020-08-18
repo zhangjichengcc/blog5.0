@@ -1,0 +1,91 @@
+.text_container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 0.52rem;
+  .ava_container {
+    &>img {
+      width: 0.72rem;
+      height: 0.72rem;
+      margin-right: 0.24rem;
+      border-radius: 50%;
+    }
+  }
+
+  .text_info {
+    max-width: 4rem;
+    position: relative;
+    .send_time {
+      font-size: 0.24rem;
+      color: #999999;
+    }
+    .send_info {
+      font-size: 0.28rem;
+      line-height: 0.4rem;
+    }
+    .send_info.left {
+      text-align: left;
+      background-color: #EDF4FF;
+    }
+    .send_info.right {
+      background-color: #ffffff;
+    }
+    .send_info p{
+      border: 0.02rem solid #E8E8E8;
+      border-radius: 0.08rem;
+      padding: 0.14rem 0.1rem;
+      color: #333333;
+    }
+    
+    .send_info.left p:before, .send_info.right p:before {
+      content: '';
+      width: 0;
+      height: 0;
+      border: 0.14rem solid;
+      position: absolute;
+    }
+    .send_info.right p:before {
+      left: -0.29rem;
+      border-color:  transparent #E8E8E8  transparent transparent;
+    }
+    .send_info.left p:before {
+      right: -0.28rem;
+      border-color:  transparent transparent transparent #E8E8E8;
+    }
+    
+    .send_info.left p:after, .send_info.right p:after {
+      content: '';
+      width: 0;
+      height: 0;
+      border: 0.2rem solid;
+      position: absolute;
+     
+    }
+    
+    .send_info.right p:after {
+      top: 0.37rem;
+      left: -0.32rem;
+      border-color:  transparent #fff transparent transparent;
+    }
+    .send_info.left p:after {
+      left:3.91rem;
+      top: 0.38rem;
+      border-color:  transparent transparent transparent #EDF4FF;
+    }
+  }
+}
+
+.text_container.self {
+  display: flex;
+  flex-direction: row-reverse;
+  .ava_container {
+    margin-left: 0.3rem;
+    margin-right: 0;
+    &>img{
+      margin-right: 0;
+    }
+  }
+  .send_time {
+    text-align: right;
+  }
+}

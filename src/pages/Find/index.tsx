@@ -1,11 +1,12 @@
 /*
  * @Author: zhangjicheng
  * @Date: 2020-05-14 11:46:01
- * @LastEditTime: 2020-06-28 11:51:34
+ * @LastEditTime: 2020-06-30 17:10:12
  * @LastEditors: Please set LastEditors
  * @Description: 默认登陆加载页面
  * @FilePath: \wechat-v\src\pages\index.tsx
  */ 
+
 import React, { FC, useRef, useState, useEffect } from 'react';
 import { router } from 'umi';
 // import { getClientToken } from '@/services/login';
@@ -35,7 +36,7 @@ const Login = (props: any) => {
 
   return (
     <div className={styles.view}>
-      <h2 onClick={openView}>PAGE2</h2>
+      <p onClick={openView}>PAGE2</p>
       <button onClick={openView}>pageChange</button>
     </div>
   );

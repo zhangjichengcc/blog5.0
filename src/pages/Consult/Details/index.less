@@ -1,0 +1,136 @@
+
+.detail_container {
+  position: relative;
+  height: calc(100vh - .9rem);
+  padding-bottom: 1.12rem;
+  padding-top: .9rem;
+  .header {
+    display: flex;
+    width: 100vw;
+    height: .9rem;
+    position: absolute;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.3rem;
+    background:rgba(255,255,255,1);
+    box-shadow: 0 0.1rem 0.2rem 0 rgba(0,0,0,0.05);
+    background-color: #fff;
+    .left {
+      font-size: 0.32rem;
+      color: #999;
+    }
+    .right {
+      font-size: 0.24rem;
+      color: #068FED;
+    }
+  }
+
+  .content_body {
+    box-sizing: border-box;
+    height: 100%;
+    // overflow: hidden;
+    overflow-y: scroll;
+    padding-bottom: .5rem;
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 1.12rem;
+    box-shadow: 0 -5px 10px 0 rgba(0,0,0,0.05);
+    input {
+      border: #D8D8D8;
+      border-radius: 0.08rem;
+      height: 0.8rem;
+      width: 100%;
+      margin-left: 0.2rem;
+      margin-right: 0.34rem;
+      background: #F8F8F8;
+      color: #333;
+    }
+    .icon {
+      width: 0.54rem;
+      height: 0.54rem;
+      margin-right: 0.3rem;
+    }
+  }
+}
+
+.upload_container {
+  padding: 0.2rem 0 0.48rem 0;
+  .cancel_btn {
+    padding-bottom: 0.4rem;
+    padding-right: 0.3rem;
+    text-align: right;
+    color: #068FED;
+  }
+  .upload {
+    display: flex;
+    align-items: center;
+    .ipt_wrapper {
+      flex: 1;
+      position: relative;
+      text-align: center;
+      :global(.am-image-picker) {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+      }
+      :global(.am-flexbox-item) {
+        position: static;
+      }
+      :global(.am-image-picker-list .am-image-picker-upload-btn input) {
+        width: 100%;
+      }
+    }
+    .inner_img_container {
+      flex: 1;
+      text-align: center;
+      &>img {
+        width: 0.64rem;
+        height: 0.64rem;
+      }
+      .txt {
+        margin-top: 0.12rem;
+        color: #999;
+        font-size: 0.24rem;
+      }
+    }
+
+    .ipt_file_wrapper {
+      flex: 1;
+      min-height: 1rem;
+      text-align: center;
+      position: relative;
+      .inner_file_container {
+        width: 100%;
+        &>img {
+          width: 0.64rem;
+          height: 0.64rem;
+        }
+        .txt {
+          margin-top: 0.12rem;
+          color: #999999;
+          font-size: 0.24rem;
+        }
+      }
+      .ipt_file {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        z-index: 11;
+      }
+    }
+  
+  }
+}
