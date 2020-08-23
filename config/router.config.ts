@@ -28,6 +28,12 @@ export default [
         title: '我的',
         path: '/my',
         component: '../pages/My',
+      },
+      {
+        title: '聊天',
+        path: '/chat',
+        component: '../pages/Chat',
+        footerBar: false,
       }
     ]
   }

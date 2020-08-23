@@ -1,17 +1,14 @@
-/*
- * @Author: zhangjicheng
- * @Date: 2020-05-14 11:46:01
- * @LastEditTime: 2020-06-30 17:10:12
- * @LastEditors: Please set LastEditors
- * @Description: 默认登陆加载页面
- * @FilePath: \wechat-v\src\pages\index.tsx
- */ 
-
 import React, { FC, useRef, useState, useEffect } from 'react';
 import { router } from 'umi';
 // import { getClientToken } from '@/services/login';
 // import config from '@/config';
+import TextBubble from './components/TextBubble';
 import styles from './index.less';
+
+const list = [
+  {message: 'nihao', id: 1, layout: 'left'},
+  {message: 'hellp', id: 2, layout: 'right'},
+]
 
 
 // interface BasicListProps {
@@ -20,26 +17,51 @@ import styles from './index.less';
 //   loading: boolean;
 // }
 
-const Login = (props: any) => {
+const Chat = (props: any) => {
   
-  // // 生命周期
-  // useEffect(() => {
-  //   console.log('componentDidMount: 组件加载后')
-  //   return () => {
-  //     console.log('componentWillUnmount: 组件卸载， 做一些清理工作')
-  //   }
-  // }, []);
+  const [ title ] = useState<string>('大厅');
+  const [ messageList, setMessageList ] = useState(list);
+  const [ ws, setWs ] = useState<any>();
+
+  const init = () => {
+    const _ws = new WebSocket('ws://localhost:5000?id=1&name=小咪');
+    setWs(_ws);
+  }
+  
+  // 生命周期
+  useEffect(() => {
+    console.log('componentDidMount: 组件加载后');
+    init();
+    return () => {
+      console.log('componentWillUnmount: 组件卸载， 做一些清理工作')
+    }
+  }, []);
 
   const openView = () => {
     router.push('/page1');
+
   }
 
   return (
     <div className={styles.view}>
-      <p onClick={openView}>PAGE2</p>
-      <button onClick={openView}>pageChange</button>
+      <div className={styles.chatView}>
+        <div className={styles.header}>
+          <span>{title}</span>
+        </div>
+        <div className={styles.chatList}>
+          { messageList.map(item => {
+            const { message, time, userId, layout } = item;
+            return <TextBubble
+              message={message}
+              time={time}
+              userId={userId}
+              layout={layout}
+            />
+          })}
+        </div>
+      </div>
     </div>
   );
 }
 
-export default Login;
+export default Chat;

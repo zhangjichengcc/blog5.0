@@ -43,7 +43,7 @@ const BasicLayout: FC = (props: any) => {
 
   const mainViewStyle = {
     height: '100vh',
-    overflowY: 'scroll',
+    'overflow-y': 'scroll',
     paddingBottom: footerBar ? 45 : 0,
   }
 
