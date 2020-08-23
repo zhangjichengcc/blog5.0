@@ -1,12 +1,3 @@
-/*
- * @Author: your name
- * @Date: 2020-06-28 10:41:42
- * @LastEditTime: 2020-07-03 09:36:48
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: \blog5.0\src\pages\index.tsx
- */
-
 import React from 'react';
 import styles from './index.css';
 
