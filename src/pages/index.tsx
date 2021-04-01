@@ -1,16 +1,20 @@
 /*
  * @Author: your name
  * @Date: 2020-06-28 10:41:42
- * @LastEditTime: 2020-07-03 09:36:48
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-04-01 18:16:43
+ * @LastEditors: zhangjicheng
  * @Description: In User Settings Edit
  * @FilePath: \blog5.0\src\pages\index.tsx
  */
 
 import React from 'react';
+import moment from 'js-moment';
 import styles from './index.css';
 
 export default function () {
+
+  globalThis.moment = moment;
+
   return (
     // eslint-disable-next-line react/jsx-filename-extension
     <div className={styles.normal}>
